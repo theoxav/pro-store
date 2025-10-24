@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pro Store E-commerce
 
-## Getting Started
+Une application e-commerce moderne construite avec Next.js 15 et React 19, utilisant PostgreSQL comme base de données et Prisma comme ORM.
 
-First, run the development server:
+## 🚀 Technologies Principales
+
+### **Frontend**
+- **Next.js 15** - Framework React avec App Router et Server Components
+- **React 19** - Bibliothèque UI avec les dernières fonctionnalités
+- **TypeScript** - Typage statique pour une meilleure robustesse du code
+- **Tailwind CSS** - Framework CSS utility-first pour un design moderne
+- **Shadcn/ui** - Composants UI modernes et accessibles
+
+### **Backend & Base de données**
+- **PostgreSQL** - Base de données relationnelle robuste
+- **Prisma** - ORM moderne avec type-safety
+- **NextAuth.js** - Authentification sécurisée
+- **API Routes** - Endpoints REST intégrés à Next.js
+
+### **Paiements & Transactions**
+- **Stripe** - Paiements en ligne sécurisés
+- **PayPal** - Solution de paiement alternative
+- **Gestion des commandes** - Workflow complet e-commerce
+
+### **Gestion d'état & Données**
+- **React Hook Form** - Gestion performante des formulaires
+- **Zod** - Validation de schémas TypeScript-first
+- **TanStack Query** - Gestion du cache et synchronisation des données
+
+### **UI/UX & Communication**
+- **React Email** - Templates d'emails transactionnels
+- **Panel Admin** - Interface d'administration complète
+- **Design responsive** - Interface adaptative mobile/desktop
+
+### **Tests & Déploiement**
+- **Jest** - Framework de tests unitaires
+- **Vercel** - Déploiement et hébergement optimisé
+
+## 🛠️ Fonctionnalités
+
+- **Catalogue produits** - Gestion complète des produits avec images
+- **Panier d'achat** - Ajout, modification et suppression d'articles
+- **Processus de commande** - Workflow complet de checkout
+- **Authentification** - Connexion/inscription sécurisée
+- **Paiements multiples** - Stripe et PayPal intégrés
+- **Panel administrateur** - Gestion des produits, commandes et utilisateurs
+- **Emails transactionnels** - Notifications automatiques
+- **Interface responsive** - Design adaptatif mobile/desktop
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Cloner le projet
+git clone <repository-url>
+cd pro-store-ecommerce
+
+# Installer les dépendances
+pnpm install
+
+# Configurer les variables d'environnement
+cp .env.example .env.local
+
+# Démarrer le serveur de développement
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Scripts Disponibles
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `pnpm dev` - Serveur de développement
+- `pnpm build` - Build de production
+- `pnpm start` - Serveur de production
+- `pnpm lint` - Vérification du code
+- `pnpm test` - Exécution des tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
