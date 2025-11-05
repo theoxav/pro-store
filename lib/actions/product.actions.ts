@@ -16,3 +16,12 @@ export async function getLatestProducts() {
     rating: product.rating.toString(),
   }));
 }
+
+// Get product by slug
+export async function getProductBySlug(slug: string) {
+  const product = await prisma.product.findFirst({
+    where: { slug: slug },
+  });
+
+  return product;
+}
