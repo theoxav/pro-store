@@ -13,8 +13,8 @@ export const MenuItems = () => {
           Cart
         </Link>
       </Button>
-      <Button asChild variant="ghost">
-        <Link href="/login">
+      <Button asChild variant="default">
+        <Link href="/sign-in">
           <UserIcon />
           Sign in
         </Link>
