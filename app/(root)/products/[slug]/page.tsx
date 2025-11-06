@@ -1,4 +1,5 @@
 import ProductPrice from '@/components/features/products/product-price';
+import ProductImages from '@/components/features/products/product/product-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,7 +17,9 @@ const ProductDetailsPage = async (props: {
     <>
       <section>
         <div className="grid grid-cols-1 md:grid-cols-5">
-          <div className="col-span-2"></div>
+          <div className="col-span-2">
+            <ProductImages images={product.images} />
+          </div>
           <div className="col-span-2 p-5">
             <div className="flex flex-col gap-6">
               <p>
@@ -57,7 +60,7 @@ const ProductDetailsPage = async (props: {
                 </div>
                 {product.stock > 0 && (
                   <div className="flex items-center">
-                    <Button className='w-full'>Add To Cart</Button>
+                    <Button className="w-full">Add To Cart</Button>
                   </div>
                 )}
               </CardContent>
