@@ -38,3 +38,11 @@ export function formatErrors(error: any): string {
   // Erreur par défaut
   return 'An error occurred. Please try again.';
 }
+
+
+export function formatCurrency(value: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(value);
+}
