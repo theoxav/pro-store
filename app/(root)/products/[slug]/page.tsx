@@ -1,4 +1,5 @@
 import ProductPrice from '@/components/features/products/product-price';
+import AddToCart from '@/components/features/products/product/add-to-cart';
 import ProductImages from '@/components/features/products/product/product-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,6 +14,7 @@ const ProductDetailsPage = async (props: {
 
   const product = await getProductBySlug(slug);
   if (!product) notFound();
+
   return (
     <>
       <section>
@@ -59,8 +61,17 @@ const ProductDetailsPage = async (props: {
                   )}
                 </div>
                 {product.stock > 0 && (
-                  <div className="flex items-center">
-                    <Button className="w-full">Add To Cart</Button>
+                  <div className="flex items-center justify-center">
+                    <AddToCart
+                      item={{
+                        productId: product.id,
+                        name: product.name,
+                        slug: product.slug,
+                        price: product.price.toString(),
+                        quantity: 1,
+                        image: product.images[0],
+                      }}
+                    />
                   </div>
                 )}
               </CardContent>
